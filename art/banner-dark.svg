@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" role="img" aria-labelledby="title desc">
+  <title id="title">Aqua Surface Drift</title>
+  <desc id="desc">Animated water surface screensaver with no ads, tracking, or analytics</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c0a09"/><stop offset="1" stop-color="#1c1917"/></linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#164e63"/><stop offset="1" stop-color="#082f49"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d7ffff" stop-opacity=".08"/><stop offset=".5" stop-color="#d7ffff" stop-opacity=".82"/><stop offset="1" stop-color="#d7ffff" stop-opacity=".08"/></linearGradient>
+    <clipPath id="clip"><rect x="545" y="25" width="225" height="150" rx="18"/></clipPath>
+  </defs>
+  <rect width="800" height="200" rx="16" fill="url(#bg)"/>
+  <text x="40" y="78" fill="#fff" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="40" font-weight="700" letter-spacing="-.5">Aqua Surface Drift</text>
+  <text x="42" y="108" fill="#a8a29e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14">Animated water, with no ads, tracking, or analytics</text>
+  <g font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="500" text-anchor="middle">
+    <rect x="40" y="128" width="92" height="22" rx="11" fill="#1a1a1a" opacity=".8" stroke="#60a5fa" stroke-width=".8"/><text x="86" y="143" fill="#60a5fa">Continuous motion</text>
+    <rect x="140" y="128" width="79" height="22" rx="11" fill="#1a1a1a" opacity=".8" stroke="#4ade80" stroke-width=".8"/><text x="179.5" y="143" fill="#4ade80">Day to night</text>
+    <rect x="227" y="128" width="93" height="22" rx="11" fill="#1a1a1a" opacity=".8" stroke="#22d3ee" stroke-width=".8"/><text x="273.5" y="143" fill="#22d3ee">On-device scene</text>
+  </g>
+  <g clip-path="url(#clip)">
+    <rect x="545" y="25" width="225" height="150" rx="18" fill="url(#water)"/>
+    <path d="M535 73 C570 50 596 90 630 71 S688 52 720 74 S765 91 790 67 V104 C758 126 729 87 696 105 S637 126 604 104 S561 88 535 107Z" fill="#0e7490" opacity=".78"/>
+    <path d="M535 112 C565 92 595 129 627 110 S687 94 719 115 S763 132 790 109 V148 C758 169 727 134 693 150 S634 168 603 147 S559 130 535 150Z" fill="#155e75" opacity=".95"/>
+    <path d="M545 65 C575 48 604 73 632 63 S690 49 716 67 S747 79 770 62" fill="none" stroke="url(#shine)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M545 125 C574 111 600 136 631 124 S689 111 716 129 S745 138 770 124" fill="none" stroke="#cffafe" stroke-opacity=".85" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="661" cy="54" rx="36" ry="8" fill="#67e8f9" opacity=".24"/>
+    <path d="M567 91 l16 -2 M611 97 l23 2 M684 91 l18 1 M741 96 l15 2 M586 151 l21 -2 M675 151 l19 1 M730 158 l18 -2" stroke="#cffafe" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+  </g>
+</svg>
