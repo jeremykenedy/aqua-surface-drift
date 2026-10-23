@@ -21,3 +21,7 @@ Host apps can discover the choices through the exported local provider at `com.j
 - Call `ContentResolver.update()` on the `settings` URI with text fields `key` and `value` to change one supported value. Invalid keys and choices are rejected.
 
 All preferences remain on device. The provider does not make network requests. Hosts should read the schema rather than rely on a copied option list. Fire TV UI settings integration is maintained separately from this screensaver app.
+
+## Optional clock
+
+`show_clock` is an explicit boolean with default `false`, choices `true|false`, and `randomAllowed=false`. It enables a gently moving local-time overlay. Scene randomization preserves the chosen clock visibility.

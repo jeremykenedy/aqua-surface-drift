@@ -11,6 +11,7 @@ public final class SettingsValues {
     if ("speed".equals(key)) return oneOf(value, "slow", "natural", "quick", "random");
     if ("shimmer".equals(key)) return oneOf(value, "off", "soft", "bright", "random");
     if ("view".equals(key)) return oneOf(value, "close", "wide", "random");
+    if ("show_clock".equals(key)) return oneOf(value, "true", "false");
     if ("randomize_all".equals(key)) return oneOf(value, "true", "false");
     return false;
   }

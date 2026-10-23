@@ -17,3 +17,9 @@ The emulator's screensaver component, enabled state, and screen-off timeout were
 ## Captures
 
 `docs/screenshots/aqua-surface-drift-preview.png` and `aqua-surface-drift-settings.png` are unretouched captures from the app running on the Android TV emulator. The preview capture followed a 45-second settling period and shows the animated scene without menus or system UI. The smaller `res/drawable-nodpi/screensaver_preview.jpg` is derived from the inspected preview capture. The captures verify emulator rendering only, not physical 4K composition or vendor-specific DreamService activation.
+
+## Optional clock regression, 2026-10-22
+
+An isolated Android TV emulator fixture compiled the production scene and provider classes from this change. The combined five-app run passed 123 actual Canvas/provider assertions. It checked the existing appearance default (OFF), explicit ON/OFF under scene randomization, portable boolean storage and schema, and invalid-write retention. OFF produced zero time/date/seconds text draws while the scene remained drawn.
+
+This isolated regression does not establish production DreamService binding, physical-TV performance or acceptance of the existing artwork. Signed release and both-TV installation gates remain pending.

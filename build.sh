@@ -8,8 +8,8 @@ ANDROID_JAR="$SDK/platforms/android-36/android.jar"
 OUT="$ROOT/build"
 KEYSTORE="${AQUA_SURFACE_KEYSTORE:-$HOME/.android/aqua-surface-drift.jks}"
 KEYPASS="${AQUA_SURFACE_KEYPASS:-$HOME/.android/aqua-surface-drift.pass}"
-VERSION_NAME="${VERSION_NAME:-1.0.0}"
-VERSION_CODE="${VERSION_CODE:-1}"
+VERSION_NAME="${VERSION_NAME:-1.1.0}"
+VERSION_CODE="${VERSION_CODE:-2}"
 
 for tool in javac keytool openssl zip; do
   command -v "$tool" >/dev/null || { echo "Missing required tool: $tool" >&2; exit 1; }
