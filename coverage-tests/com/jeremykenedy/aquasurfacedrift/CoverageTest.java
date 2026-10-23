@@ -6,5 +6,6 @@ public final class CoverageTest {
   @Test
   public void verifiesSceneOptionsProviderContractAndAnimationMath() {
     AquaSurfaceOptionsTest.main(new String[0]);
+    ClockVisibilitySettingsTest.main(new String[0]);
   }
 }

@@ -9,4 +9,6 @@ javac -source 8 -target 8 -d "$OUT" \
   "$ROOT/src/com/jeremykenedy/aquasurfacedrift/SettingsValues.java" \
   "$ROOT/tests/AquaSurfaceOptionsTest.java"
 java -ea -cp "$OUT" com.jeremykenedy.aquasurfacedrift.AquaSurfaceOptionsTest
+javac -source 8 -target 8 -cp "$OUT" -d "$OUT" "$ROOT/tests/ClockVisibilitySettingsTest.java"
+java -ea -cp "$OUT" com.jeremykenedy.aquasurfacedrift.ClockVisibilitySettingsTest
 python3 -m unittest -v tests.test_installer

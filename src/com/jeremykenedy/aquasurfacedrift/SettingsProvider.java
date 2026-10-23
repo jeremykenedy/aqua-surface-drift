@@ -46,7 +46,8 @@ public final class SettingsProvider extends ContentProvider {
     Context context = getContext();
     if (context == null) return 0;
     SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
-    if ("randomize_all".equals(key)) editor.putBoolean(key, Boolean.parseBoolean(value));
+    if ("show_clock".equals(key) || "randomize_all".equals(key))
+      editor.putBoolean(key, Boolean.parseBoolean(value));
     else editor.putString(key, value);
     editor.apply();
     return 1;
@@ -83,6 +84,8 @@ public final class SettingsProvider extends ContentProvider {
           "true|false",
           false
         });
+    cursor.addRow(
+        new Object[] {"show_clock", "Show clock", "boolean", "false", "true|false", false});
     return cursor;
   }
 
@@ -99,6 +102,8 @@ public final class SettingsProvider extends ContentProvider {
         new Object[] {
           "randomize_all", Boolean.toString(preferences.getBoolean("randomize_all", false))
         });
+    cursor.addRow(
+        new Object[] {"show_clock", Boolean.toString(preferences.getBoolean("show_clock", false))});
     return cursor;
   }
 

@@ -84,8 +84,20 @@ public final class SettingsActivity extends Activity {
         new String[] {"close", "wide", "random"},
         new String[] {"Close surface", "Wide surface", "Random"},
         "wide");
+    CheckBox showClock = new CheckBox(this);
+    showClock.setText("Show clock");
+    showClock.setTextSize(18);
+    showClock.setChecked(preferences.getBoolean("show_clock", false));
+    showClock.setOnCheckedChangeListener(
+        new android.widget.CompoundButton.OnCheckedChangeListener() {
+          @Override
+          public void onCheckedChanged(android.widget.CompoundButton button, boolean checked) {
+            preferences.edit().putBoolean("show_clock", checked).apply();
+          }
+        });
+    content.addView(showClock);
     CheckBox randomize = new CheckBox(this);
-    randomize.setText("Randomize all settings each time the screensaver starts");
+    randomize.setText("Randomize scene settings each time the screensaver starts");
     randomize.setTextSize(18);
     randomize.setChecked(preferences.getBoolean("randomize_all", false));
     randomize.setOnCheckedChangeListener(

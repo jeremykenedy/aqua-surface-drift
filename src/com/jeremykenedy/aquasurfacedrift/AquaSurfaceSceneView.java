@@ -28,9 +28,14 @@ final class AquaSurfaceSceneView extends View {
   private RadialGradient sunlight;
   private long startedAt;
   private boolean running;
+  private final boolean showClock;
+  private final ClockOverlay clock;
 
   AquaSurfaceSceneView(Context context) {
     super(context);
+    clock = new ClockOverlay(context);
+    showClock =
+        PreferenceManager.getDefaultSharedPreferences(context).getBoolean("show_clock", false);
     setLayerType(View.LAYER_TYPE_HARDWARE, null);
     loadOptions();
     seedGlints();
@@ -60,6 +65,7 @@ final class AquaSurfaceSceneView extends View {
       drawSunlight(canvas, time);
       postDelayed(invalidator, FRAME_DELAY_MS);
     }
+    if (showClock) clock.draw(canvas, getWidth(), getHeight(), time);
   }
 
   @Override
